@@ -7,10 +7,6 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home'
-    },
-    {
-      path: '/form',
       name: 'form',
       component: FormView
     },
