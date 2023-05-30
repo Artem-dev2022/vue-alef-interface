@@ -8,8 +8,8 @@ import { RouterLink, RouterView } from 'vue-router';
       <img alt="лого" class="header__logo" src="@/assets/alef-logo.png"/>
 
       <nav class="header__nav">
-        <RouterLink class="header__link" :class="{'header__link--active': currentPage === 'form'}" v-on:click="currentPage = 'form'" to="/form">Форма</RouterLink>
-        <RouterLink class="header__link" :class="{'header__link--active': currentPage === 'preview'}" v-on:click="currentPage = 'preview'" to="/preview">Превью</RouterLink>
+        <RouterLink class="header__link" :class="{'header__link--active': this.$route.name === 'form'}"  to="/form">Форма</RouterLink>
+        <RouterLink class="header__link" :class="{'header__link--active': this.$route.name === 'preview'}" to="/preview">Превью</RouterLink>
       </nav>
     </div>
   </header>
@@ -29,12 +29,4 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <script>
 import { RouterLink, RouterView } from 'vue-router';
-
-export default {
-  data() {
-    return {
-      currentPage: 'home',
-    }
-  },
-}
 </script>

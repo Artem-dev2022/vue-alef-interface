@@ -103,8 +103,8 @@ export default {
           return
         }
       }
-
       this.$store.commit('updatePerson', {name: this.personName, age: this.personAge, children: this.children})
+      this.$router.push({ path: 'preview' })
     }
   }
 }
