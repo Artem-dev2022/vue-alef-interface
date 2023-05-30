@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: '/vue-alef-interface/' 
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/vue-alef-interface/'
+    : '/'
 }
